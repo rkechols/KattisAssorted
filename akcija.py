@@ -2,9 +2,12 @@ from typing import List
 
 
 def akcija(prices: List[int]) -> int:
-	removable = len(prices) // 3
-	prices.sort()
-	return sum(prices[removable:])
+	prices.sort(reverse=True)
+	total = 0
+	for i, p in enumerate(prices, start=1):
+		if i % 3 != 0:
+			total += p
+	return total
 
 
 if __name__ == "__main__":

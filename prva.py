@@ -31,7 +31,7 @@ def prva(all_scores: List[str]) -> str:
 	return best_word
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # TODO: not all tests are passing
 	line = input().split()
 	r = int(line[0])
 	c = int(line[1])

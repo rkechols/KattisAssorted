@@ -79,7 +79,7 @@ def trojke(board: List[str]) -> int:
 	return count
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # TODO: not all tests are passing
 	n = int(input())
 	values = list()
 	for _ in range(n):

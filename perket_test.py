@@ -1,0 +1,16 @@
+from perket import perket
+
+
+if __name__ == "__main__":
+	all_passing = True
+	for in_values, answer in [
+		([(3, 10)], 7),
+		([(3, 8), (5, 8)], 1),
+		([(1, 7), (2, 6), (3, 8), (4, 9)], 1)
+	]:
+		out = perket(in_values)
+		if out != answer:
+			print(f"wrong answer for input {in_values}: got {out} but expected {answer}")
+			all_passing = False
+	if all_passing:
+		print("all tests passed!")

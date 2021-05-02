@@ -11,24 +11,21 @@ def prod(a: List[int]) -> int:
 
 
 def perket(ingredients: List[Tuple[int, int]]) -> int:
-	smallest = None
 	i_count = len(ingredients)
-	for combo_dec in range(1, 2 ** i_count):
-		combo_bin = format(combo_dec, "b")
-		combo_bin = ("0" * (i_count - len(combo_bin))) + combo_bin  # pad the front with 0
-		sours = list()
-		bitters = list()
-		for i, bit in enumerate(combo_bin):
-			if bit == "1":
-				this_s, this_b = ingredients[i]
-				sours.append(this_s)
-				bitters.append(this_b)
-		s_score = prod(sours)
-		b_score = sum(bitters)
-		net_score = abs(s_score - b_score)
-		if smallest is None or net_score < smallest:
-			smallest = net_score
-	return smallest
+	best = None
+	for start_index in range(i_count):
+		running_s, running_b = ingredients[start_index]
+		running_net = abs(running_s - running_b)
+		for i in range(start_index + 1, i_count):
+			this_s, this_b = ingredients[i]
+			new_s = running_s * this_s
+			new_b = running_b + this_b
+			new_net = abs(new_s - new_b)
+			if new_net < running_net:
+				running_net = new_net
+		if best is None or running_net < best:
+			best = running_net
+	return best
 
 
 if __name__ == "__main__":

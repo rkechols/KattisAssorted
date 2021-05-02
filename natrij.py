@@ -14,7 +14,6 @@ def timestamp_to_sec(t: str) -> int:
 
 def sec_to_timestamp(t: int) -> str:
 	hours = t // (SEC_PER_MIN * MIN_PER_H)
-	hours %= H_PER_DAY
 	t_min = t % (SEC_PER_MIN * MIN_PER_H)
 	minutes = t_min // SEC_PER_MIN
 	seconds = t_min % SEC_PER_MIN
@@ -30,7 +29,7 @@ def sec_to_timestamp(t: int) -> str:
 def natrij(time_now: str, time_boom: str) -> str:
 	time_now_sec = timestamp_to_sec(time_now)
 	time_boom_sec = timestamp_to_sec(time_boom)
-	if time_boom_sec < time_now_sec:
+	if time_boom_sec <= time_now_sec:
 		time_boom_sec += (SEC_PER_MIN * MIN_PER_H * H_PER_DAY)
 	diff = time_boom_sec - time_now_sec
 	return sec_to_timestamp(diff)

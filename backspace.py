@@ -3,16 +3,12 @@ BACKSPACE = "<"
 
 def backspace(text: str) -> str:
 	stack = list()
-	delete_count = 0
-	for c in reversed(text):
+	for c in text:
 		if c == BACKSPACE:
-			delete_count += 1
+			stack.pop(-1)
 		else:
-			if delete_count > 0:
-				delete_count -= 1
-			else:
-				stack.append(c)
-	return "".join(reversed(stack))
+			stack.append(c)
+	return "".join(stack)
 
 
 if __name__ == "__main__":

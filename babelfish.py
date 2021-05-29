@@ -11,25 +11,23 @@ def letter_to_index(letter: str) -> int:
 class TrieNode:
 	def __init__(self, value: str = None):
 		self.value = value
-		self.children = list()
-		for _ in range(letter_to_index("z")):
-			self.children.append(None)
+		self.children = dict()
 
 	def set(self, location: str, value: str):
 		index = letter_to_index(location[0])
 		if len(location) == 1:  # base case
-			if self.children[index] is None:
+			if index not in self.children:
 				self.children[index] = TrieNode(value)
 			else:
 				self.children[index].value = value
 		else:
-			if self.children[index] is None:
+			if index not in self.children:
 				self.children[index] = TrieNode()
 			self.children[index].set(location[1:], value)
 
 	def get(self, location: str) -> Union[str, None]:
 		index = letter_to_index(location[0])
-		if self.children[index] is None:
+		if index not in self.children:
 			return None  # dead end
 		if len(location) == 1:  # base case
 			return self.children[index].value

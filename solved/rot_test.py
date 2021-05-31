@@ -1,4 +1,4 @@
-from rot import rot
+from solved.rot import rot
 
 
 if __name__ == "__main__":

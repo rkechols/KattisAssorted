@@ -1,14 +1,14 @@
-from spavanac import spavanac
+from solved.slatkisi import slatkisi
 
 
 if __name__ == "__main__":
 	all_passing = True
 	for in_values, answer in [
-		((10, 10), (9, 25)),
-		((0, 30), (23, 45)),
-		((23, 40), (22, 55))
+		((184, 1), 180),
+		((123450995, 1), 123451000),
+		((182, 2), 200)
 	]:
-		out = spavanac(*in_values)
+		out = slatkisi(*in_values)
 		if out != answer:
 			print(f"wrong answer for input {in_values}:")
 			print(f"actual:\n{out}")

@@ -1,4 +1,4 @@
-from fox_say import fox_say
+from solved.fox_say import fox_say
 
 
 if __name__ == "__main__":

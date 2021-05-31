@@ -1,13 +1,14 @@
-from sibice import sibice
+from solved.zamka import zamka
 
 
 if __name__ == "__main__":
 	all_passing = True
 	for in_values, answer in [
-		((3, 4, [3, 4, 5, 6, 7]), ["DA", "DA", "DA", "NE", "NE"]),
-		((12, 17, [21, 20]), ["NE", "DA"])
+		((1, 100, 4), (4, 40)),
+		((100, 500, 12), (129, 480)),
+		((1, 10000, 1), (1, 10000))
 	]:
-		out = sibice(*in_values)
+		out = zamka(*in_values)
 		if out != answer:
 			print(f"wrong answer for input {in_values}: got {out} but expected {answer}")
 			all_passing = False

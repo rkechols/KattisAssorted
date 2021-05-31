@@ -1,4 +1,4 @@
-from keyboardd import keyboardd
+from solved.keyboardd import keyboardd
 
 
 if __name__ == "__main__":

@@ -1,13 +1,14 @@
-from okvir import okvir
+from solved.spavanac import spavanac
 
 
 if __name__ == "__main__":
 	all_passing = True
 	for in_values, answer in [
-		((2, 2, 2, 2, ["honi", "oker", "nera", "irak"]), ["#.#.#.#.", ".#.#.#.#", "#.honi#.", ".#oker.#", "#.nera#.", ".#irak.#", "#.#.#.#.", ".#.#.#.#"]),
-		((1, 0, 3, 1, ["rima", "mama"]), ["#.#.#.#", "rima.#.", "mama#.#", ".#.#.#."])
+		((10, 10), (9, 25)),
+		((0, 30), (23, 45)),
+		((23, 40), (22, 55))
 	]:
-		out = okvir(*in_values)
+		out = spavanac(*in_values)
 		if out != answer:
 			print(f"wrong answer for input {in_values}:")
 			print(f"actual:\n{out}")

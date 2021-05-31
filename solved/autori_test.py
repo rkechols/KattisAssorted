@@ -1,4 +1,4 @@
-from solved.autori import autori
+from autori import autori
 
 
 if __name__ == "__main__":

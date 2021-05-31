@@ -1,4 +1,4 @@
-from solved.slatkisi import slatkisi
+from slatkisi import slatkisi
 
 
 if __name__ == "__main__":

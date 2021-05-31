@@ -1,4 +1,4 @@
-from solved.planina import planina
+from planina import planina
 
 
 if __name__ == "__main__":

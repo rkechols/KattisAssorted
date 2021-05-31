@@ -1,4 +1,4 @@
-from solved.okvir import okvir
+from okvir import okvir
 
 
 if __name__ == "__main__":

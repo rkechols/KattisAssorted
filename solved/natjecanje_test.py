@@ -1,4 +1,4 @@
-from solved.natjecanje import natjecanje
+from natjecanje import natjecanje
 
 
 if __name__ == "__main__":

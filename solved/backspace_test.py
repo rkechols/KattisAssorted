@@ -1,4 +1,4 @@
-from solved.backspace import backspace
+from backspace import backspace
 
 
 if __name__ == "__main__":

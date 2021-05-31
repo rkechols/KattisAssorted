@@ -1,4 +1,4 @@
-from solved.perket import perket
+from perket import perket
 
 
 if __name__ == "__main__":

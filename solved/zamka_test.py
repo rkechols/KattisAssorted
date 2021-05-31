@@ -1,4 +1,4 @@
-from solved.zamka import zamka
+from zamka import zamka
 
 
 if __name__ == "__main__":

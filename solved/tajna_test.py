@@ -1,4 +1,4 @@
-from solved.tajna import tajna
+from tajna import tajna
 
 
 if __name__ == "__main__":

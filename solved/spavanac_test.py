@@ -1,4 +1,4 @@
-from solved.spavanac import spavanac
+from spavanac import spavanac
 
 
 if __name__ == "__main__":

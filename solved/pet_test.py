@@ -1,4 +1,4 @@
-from solved.pet import pet
+from pet import pet
 
 
 if __name__ == "__main__":

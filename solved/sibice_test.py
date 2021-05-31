@@ -1,4 +1,4 @@
-from solved.sibice import sibice
+from sibice import sibice
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-from solved.tarifa import tarifa
+from tarifa import tarifa
 
 
 if __name__ == "__main__":

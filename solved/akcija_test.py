@@ -1,4 +1,4 @@
-from solved.akcija import akcija
+from akcija import akcija
 
 
 if __name__ == "__main__":

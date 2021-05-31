@@ -1,4 +1,4 @@
-from solved.recenice import recenice
+from recenice import recenice
 
 
 if __name__ == "__main__":

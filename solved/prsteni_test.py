@@ -1,4 +1,4 @@
-from solved.prsteni import prsteni
+from prsteni import prsteni
 from fractions import Fraction
 
 

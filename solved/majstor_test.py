@@ -1,4 +1,4 @@
-from solved.majstor import majstor
+from majstor import majstor
 
 
 if __name__ == "__main__":

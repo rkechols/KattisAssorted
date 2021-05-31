@@ -1,4 +1,4 @@
-from solved.natrij import natrij
+from natrij import natrij
 
 
 if __name__ == "__main__":

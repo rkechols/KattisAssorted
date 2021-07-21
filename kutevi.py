@@ -12,7 +12,7 @@ def kutevi(known_angles: List[int], required_angles: List[int]) -> List[bool]:
 	return to_return
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # TODO: NOT SOLVED
 	N, K = tuple(map(int, input().split()))
 	known = list(map(int, input().split()))
 	required = list(map(int, input().split()))
